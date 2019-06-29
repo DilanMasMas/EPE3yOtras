@@ -40,6 +40,7 @@ getTodo(id: string){
 updateTodo(todo:escribirD, id:string){
   return this.todosCollection.doc(id).update(todo);
 }
+
 addTodo(Todo:escribirD){
 return this.todosCollection.add(Todo);
 }
