@@ -10,13 +10,14 @@
 </ion-header>
 
 <ion-content padding>
+
   <ion-list lines="full">
     <ion-item *ngIf="todo">
       <ion-input required type="text" placeholder="escribir" [(ngModel)]='todo.escribir'></ion-input>
     </ion-item>
 
     <ion-item *ngIf="todo">
-      <ion-input required type="number" placeholder="priority" [(ngModel)]='todo.priority'></ion-input>
+      <ion-input required type="text" placeholder="priority" [(ngModel)]='todo.priority'></ion-input>
     </ion-item>
 
   </ion-list>
