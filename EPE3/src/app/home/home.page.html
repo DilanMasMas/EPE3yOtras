@@ -3,6 +3,9 @@
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
+    <ion-buttons slot="end">
+        <ion-back-button></ion-back-button>
+    </ion-buttons>
     <ion-title>
       CRUD
     </ion-title>
@@ -12,16 +15,17 @@
 <ion-content padding>
 <ion-list>
         <ion-item *ngIf="todo">
-          <ion-label position="floating">Nombre</ion-label>
+          <ion-label position="stacked">Nombre</ion-label>
           <ion-input required type="text" [(ngModel)]='todo.escribir' ></ion-input>
         </ion-item>
     
         <ion-item *ngIf="todo">
-            <ion-label position="floating">Comentario</ion-label>
+            <ion-label position="stacked">Comentario</ion-label>
           <ion-input required type="text" [(ngModel)]='todo.priority' ></ion-input>
         </ion-item>
+        <ion-button (click)="saveTodo()">Comentar</ion-button>
 </ion-list>
-      <ion-button expand="full" (click)="saveTodo()">Guardar</ion-button>
+      
 
 <ion-list>
   <ion-item-sliding *ngFor="let todo of todos">

@@ -15,7 +15,11 @@ const routes: Routes = [
     path: 'list',
     loadChildren: './list/list.module#ListPageModule'
   },
-  { path: 'noticia1', loadChildren: './noticia1/noticia1.module#Noticia1PageModule' }
+  { path: 'noticia1', loadChildren: './noticia1/noticia1.module#Noticia1PageModule' },
+  { path: 'noticia2', loadChildren: './noticia2/noticia2.module#Noticia2PageModule' },
+  { path: 'noticia3', loadChildren: './noticia3/noticia3.module#Noticia3PageModule' },
+  { path: 'noticia4', loadChildren: './noticia4/noticia4.module#Noticia4PageModule' },
+  { path: 'noticia5', loadChildren: './noticia5/noticia5.module#Noticia5PageModule' }
 ];
 
 @NgModule({
