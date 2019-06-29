@@ -62,6 +62,7 @@ async saveTodo(){
     });
   }
 }
+
 onRemove(idTodo:string){
   this.todoService.removeTodo(idTodo);;
 }

@@ -1,0 +1,30 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Jami Bot
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-header *ngIf="!hasVerifiedEmail" padding class="verify-email">
+  <div>
+    Please send a verification email and verify your account
+  </div>
+  <div>
+    <ion-button color="secondary" (click)="sendVerificationEmail()">Send Verification Email</ion-button>
+    <ion-button color="secondary" (click)="reload()">Refresh</ion-button>
+  </div>
+  <div *ngIf="sentTimestamp">
+    Verification email sent at {{sentTimestamp | date:'medium'}}
+  </div>
+</ion-header>
+
+<ion-content padding>
+  <firebase-ui></firebase-ui>
+
+  <h1 *ngIf="afAuth.auth.currentUser">
+    Welcome {{afAuth.auth.currentUser.displayName}}!
+  </h1>
+
+  <ion-button *ngIf="afAuth.auth.currentUser" (click)="signOut()">Sign Out</ion-button>
+</ion-content>
