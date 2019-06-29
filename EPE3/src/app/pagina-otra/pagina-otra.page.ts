@@ -12,7 +12,7 @@ import { NavController, LoadingController } from '@ionic/angular';
 export class PaginaOtraPage implements OnInit {
   todo : escribirD = {
     escribir: '',
-    priority: 0
+    priority: ''
   };
 todoId = null;
   constructor( private route: ActivatedRoute, private nav: NavController,
@@ -48,6 +48,9 @@ async saveTodo(){
       loading.dismiss();
       //redireccionar a usuario
       this.nav.navigateForward('/');
+      this.todo.escribir=" ";
+      this.todo.priority=" ";
+
     });
   }else{
     //se añade uno nuevo
