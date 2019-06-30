@@ -32,7 +32,9 @@ const routes: Routes = [
   { path: 'ciencia', loadChildren: './ciencia/ciencia.module#CienciaPageModule' },
   { path: 'cultura', loadChildren: './cultura/cultura.module#CulturaPageModule' },
   { path: 'internacional', loadChildren: './internacional/internacional.module#InternacionalPageModule' },
-  { path: 'resenas', loadChildren: './resenas/resenas.module#ResenasPageModule' }
+  { path: 'resenas', loadChildren: './resenas/resenas.module#ResenasPageModule' },
+  { path: 'otra/:id', loadChildren: './pagina-otra/pagina-otra.module#PaginaOtraPageModule' },
+  { path: 'otra', loadChildren: './pagina-otra/pagina-otra.module#PaginaOtraPageModule' }
 
 ];
 
