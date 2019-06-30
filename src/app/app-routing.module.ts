@@ -34,7 +34,9 @@ const routes: Routes = [
   { path: 'internacional', loadChildren: './internacional/internacional.module#InternacionalPageModule' },
   { path: 'resenas', loadChildren: './resenas/resenas.module#ResenasPageModule' },
   { path: 'otra/:id', loadChildren: './pagina-otra/pagina-otra.module#PaginaOtraPageModule' },
-  { path: 'otra', loadChildren: './pagina-otra/pagina-otra.module#PaginaOtraPageModule' }
+  { path: 'otra', loadChildren: './pagina-otra/pagina-otra.module#PaginaOtraPageModule' },
+  { path: 'nosotros', loadChildren: './nosotros/nosotros.module#NosotrosPageModule' }
+
 
 ];
 

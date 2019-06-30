@@ -30,6 +30,7 @@ async loadTodo(){
   });
   await loading.present();
   this.todoService.getTodo(this.todoId).subscribe(res =>{
+    
     loading.dismiss();
     this.todo=res;
   });
