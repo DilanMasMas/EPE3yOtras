@@ -16,24 +16,24 @@ export class AppComponent {
       icon: 'home'
     },
     {
+      title: 'Ciencia',
+      url: '/ciencia',
+      icon: 'flask'
+    },
+    {
       title: 'Deportes',
-      url: '/list',
+      url: '/deportes',
       icon: 'football'
     }
     ,
     {
       title: 'Internacional',
-      url: '/list',
+      url: '/internacional',
       icon: 'globe'
     },
     {
-      title: 'Ciencia',
-      url: '/list',
-      icon: 'flask'
-    },
-    {
       title: 'Cultura',
-      url: '/list',
+      url: '/cultura',
       icon: 'logo-octocat'
     }
   ];

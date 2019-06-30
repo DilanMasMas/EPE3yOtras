@@ -17,7 +17,7 @@ export class TodoService {
   constructor(db:AngularFirestore) {
     //tabla
     this.todosCollection = db.collection<escribirD>('todos');
-    //carga los datos de "todo"
+    //carga los datos de "todo" 
     this.todos = this.todosCollection.snapshotChanges().pipe(map(
       Actions =>{
         return Actions.map(a => {
