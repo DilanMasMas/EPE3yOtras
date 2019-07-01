@@ -1,4 +1,4 @@
-## новости (Novosti)
+### новости (Novosti)
 
 ![e5dc598b-21ba-4929-b58d-ac10fac1115b_200x200](https://user-images.githubusercontent.com/26550175/60407000-c3897800-9b86-11e9-8740-349a5ae2320f.png)
 
