@@ -45,7 +45,8 @@ export class ResenasPage implements OnInit {
   }
   async saveTodo() {
 
-    if (this.todo.nombre == "" || this.todo.edad == "" ||this.todo.comentario == "") {
+    if (this.todo.nombre == "" || this.todo.edad == "" ||this.todo.comentario == "" 
+    || this.todo.nombre == " " || this.todo.edad == " " ||this.todo.comentario == " ") {
 
       const toast = await this.toastController.create({
         message: 'Rellene todos los campos.',
@@ -66,7 +67,6 @@ export class ResenasPage implements OnInit {
           //se ocualta el cargando
           loading.dismiss();
           //redireccionar a usuario
-          this.nav.navigateForward('/..');
           this.todo.nombre=" ";
           this.todo.comentario=" ";
           this.todo.edad=" ";
@@ -78,7 +78,6 @@ export class ResenasPage implements OnInit {
           //se ocualta el cargando
           loading.dismiss();
           //redireccionar a usuario
-          this.nav.navigateForward('/..');
           this.todo.nombre=" ";
           this.todo.comentario=" ";
           this.todo.edad=" ";
