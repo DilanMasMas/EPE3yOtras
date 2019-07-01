@@ -11,11 +11,13 @@
 
   <ion-list lines="full">
     <ion-item *ngIf="todo">
-      <ion-input required type="text" placeholder="" [(ngModel)]='todo.escribir'></ion-input>
+      <ion-input required type="text" placeholder="" [(ngModel)]='todo.nombre'></ion-input>
     </ion-item>
-
     <ion-item *ngIf="todo">
-      <ion-input required type="text" placeholder="" [(ngModel)]='todo.priority'></ion-input>
+      <ion-input required type="number" placeholder="" [(ngModel)]='todo.edad'></ion-input>
+    </ion-item>
+    <ion-item *ngIf="todo">
+      <ion-input required type="text" placeholder="" [(ngModel)]='todo.comentario'></ion-input>
     </ion-item>
 
   </ion-list>

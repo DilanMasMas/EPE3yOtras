@@ -11,8 +11,9 @@ import { NavController, LoadingController } from '@ionic/angular';
 })
 export class PaginaOtraPage implements OnInit {
   todo : escribirD = {
-    escribir: '',
-    priority: ''
+    nombre: '',
+    comentario: '',
+    edad:''
   };
 todoId = null;
   constructor( private route: ActivatedRoute, private nav: NavController,
@@ -48,8 +49,9 @@ async saveTodo(){
       loading.dismiss();
       //redireccionar a usuario
       this.nav.navigateForward('resenas');
-      this.todo.escribir=" ";
-      this.todo.priority=" ";
+      this.todo.nombre=" ";
+      this.todo.comentario=" ";
+      this.todo.edad=" ";
 
     });
   }else{

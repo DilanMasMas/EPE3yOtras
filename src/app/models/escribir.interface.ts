@@ -1,6 +1,7 @@
 export interface escribirD{
     id?: string;
-    escribir: string;
-    priority: string;
+    nombre: string;
+    comentario: string;
+    edad: string;
     
 }

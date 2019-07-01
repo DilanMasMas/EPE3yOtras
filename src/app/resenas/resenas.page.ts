@@ -13,8 +13,9 @@ import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
 export class ResenasPage implements OnInit {
 
   todo: escribirD = {
-    escribir: '',
-    priority: ''
+    nombre: '',
+    comentario: '',
+    edad:''
   };
   todoId = null;
   todos = null;
@@ -54,8 +55,9 @@ export class ResenasPage implements OnInit {
         loading.dismiss();
         //redireccionar a usuario
         this.nav.navigateForward('/..');
-        this.todo.escribir=" ";
-        this.todo.priority=" ";
+        this.todo.nombre=" ";
+        this.todo.comentario=" ";
+        this.todo.edad=" ";
 
       });
     } else {
@@ -65,8 +67,10 @@ export class ResenasPage implements OnInit {
         loading.dismiss();
         //redireccionar a usuario
         this.nav.navigateForward('/..');
-        this.todo.escribir=" ";
-        this.todo.priority=" ";
+        this.todo.nombre=" ";
+        this.todo.comentario=" ";
+        this.todo.edad=" ";
+
       });
     }
   }
