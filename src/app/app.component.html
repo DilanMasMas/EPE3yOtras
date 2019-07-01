@@ -28,9 +28,9 @@
                 </ion-label>            
               </ion-item>
               <ion-menu-toggle>
-              <ion-item>
+              <ion-item lines="none">
                 <ion-label>
-                  <ion-button *ngIf="afAuth.auth.currentUser" (click)="signOut()">Sign Out</ion-button>
+                  <ion-button color="dark" *ngIf="afAuth.auth.currentUser" (click)="signOut()">Cerrar sesion</ion-button>
                 </ion-label>
               </ion-item>
             </ion-menu-toggle>

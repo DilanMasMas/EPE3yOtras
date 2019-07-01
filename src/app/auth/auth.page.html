@@ -7,14 +7,14 @@
 <ion-content>
   <firebase-ui></firebase-ui>
   <ion-card *ngIf="afAuth.auth.currentUser">
-    <ion-img src="#">
+    <ion-img src="https://firebasestorage.googleapis.com/v0/b/noticias-7ab88.appspot.com/o/logo.png?alt=media&token=244f9ea0-2bf6-4755-973e-0245a616863d">
     </ion-img>
     <ion-card-header>
       <ion-card-title>Bienvenido, {{afAuth.auth.currentUser.displayName}}!</ion-card-title>
       <ion-card-subtitle>Disfruta de las noticias.</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
-      <ion-button color="dark" routerLink="/home" routerDirection="back">Volver al menu</ion-button>
+      <ion-button expand="block" color="dark" routerLink="/home" routerDirection="back">Volver al menu</ion-button>
     </ion-card-content>
 
   </ion-card>
