@@ -35,7 +35,8 @@ const routes: Routes = [
   { path: 'resenas', loadChildren: './resenas/resenas.module#ResenasPageModule' },
   { path: 'otra/:id', loadChildren: './pagina-otra/pagina-otra.module#PaginaOtraPageModule' },
   { path: 'otra', loadChildren: './pagina-otra/pagina-otra.module#PaginaOtraPageModule' },
-  { path: 'nosotros', loadChildren: './nosotros/nosotros.module#NosotrosPageModule' }
+  { path: 'nosotros', loadChildren: './nosotros/nosotros.module#NosotrosPageModule' },  { path: 'auth', loadChildren: './auth/auth.module#AuthPageModule' }
+
 
 
 ];

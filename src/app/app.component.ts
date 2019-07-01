@@ -11,6 +11,11 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
+      title: 'Inicia sesion con google',
+      url: '/auth',
+      icon: 'logo-googleplus'
+    },
+    {
       title: 'Home',
       url: '/home',
       icon: 'home'

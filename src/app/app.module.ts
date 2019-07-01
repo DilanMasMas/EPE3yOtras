@@ -11,6 +11,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from 'angularfire2'; 
 import { environment } from '../environments/environment';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+
+import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
+
+const firebaseUiAuthConfig: firebaseui.auth.Config = {
+  signInFlow: 'popup',
+  signInOptions: [
+    firebase.auth.EmailAuthProvider.PROVIDER_ID,
+    // firebase.auth.PhoneAuthProvider.PROVIDER_ID,
+  ],
+  tosUrl: '/terms',
+  privacyPolicyUrl: '/privacy',
+  credentialHelper: firebaseui.auth.CredentialHelper.NONE,
+};
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +35,9 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
     IonicModule.forRoot(),
     AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    FirebaseUIModule.forRoot(firebaseUiAuthConfig)
   ],
   providers: [
     StatusBar,
