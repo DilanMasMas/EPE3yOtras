@@ -4,6 +4,7 @@ import { TodoService } from'../service/todo.service';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, LoadingController } from '@ionic/angular';
 import { Placeholder } from '@angular/compiler/src/i18n/i18n_ast';
+import { ToastController } from '@ionic/angular';
 
 @Component({
   selector: 'app-resenas',
@@ -22,7 +23,8 @@ export class ResenasPage implements OnInit {
 
  
   constructor(private route: ActivatedRoute, private nav: NavController,
-    private todoService: TodoService, private loadingController: LoadingController) { }
+    private todoService: TodoService, private loadingController: LoadingController,
+    public toastController: ToastController) { }
 
   ngOnInit() {
     this.todoService.getTodos().subscribe(res => this.todos = res);
@@ -44,8 +46,12 @@ export class ResenasPage implements OnInit {
   async saveTodo() {
 
     if (this.todo.nombre == " " || this.todo.edad == " " ||this.todo.comentario == " ") {
-      console.log("rellenar");
-      
+
+      const toast = await this.toastController.create({
+        message: 'Rellene todos los campos.',
+        duration: 2000
+      });
+      toast.present();
     } else {
       const loading = await this.loadingController.create({
         message: 'Guardando...'
