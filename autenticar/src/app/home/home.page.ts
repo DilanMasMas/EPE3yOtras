@@ -15,6 +15,7 @@ export class HomePage {
   signOut(){
     this.afAuth.auth.signOut().then(()=>{
       location.reload();
+      
     });
   }
 }

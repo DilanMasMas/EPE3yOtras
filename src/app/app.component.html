@@ -27,6 +27,13 @@
                   <h2>Quienes Somos</h2>
                 </ion-label>            
               </ion-item>
+              <ion-menu-toggle>
+              <ion-item>
+                <ion-label>
+                  <ion-button *ngIf="afAuth.auth.currentUser" (click)="signOut()">Sign Out</ion-button>
+                </ion-label>
+              </ion-item>
+            </ion-menu-toggle>
         </ion-list>
       </ion-content>
     </ion-menu>

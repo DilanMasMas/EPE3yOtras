@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
 
-import { Platform } from '@ionic/angular';
+import { Platform, AlertController } from '@ionic/angular';
 import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { AngularFireAuth } from '@angular/fire/auth';
+
 
 @Component({
   selector: 'app-root',
@@ -46,7 +48,9 @@ export class AppComponent {
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
+    private afAuth: AngularFireAuth,
+    public alertController: AlertController
   ) {
     this.initializeApp();
   }
@@ -56,5 +60,19 @@ export class AppComponent {
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });
+  }
+  async signOut(){
+    const alert = await this.alertController.create({
+      header: 'Adios',
+      message: 'Vuelva pronto :D',
+      buttons: ['OK']
+    });
+
+    await alert.present();
+
+    this.afAuth.auth.signOut().then(()=>{
+      
+    });
+    
   }
 }

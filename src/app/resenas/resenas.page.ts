@@ -42,37 +42,46 @@ export class ResenasPage implements OnInit {
     });
   }
   async saveTodo() {
-    const loading = await this.loadingController.create({
-      message: 'Guardando...'
-    });
-    //nos muestra el cargando
-    await loading.present();
 
-    if (this.todoId) {
-      //se actualiza
-      this.todoService.updateTodo(this.todo, this.todoId).then(() => {
-        //se ocualta el cargando
-        loading.dismiss();
-        //redireccionar a usuario
-        this.nav.navigateForward('/..');
-        this.todo.nombre=" ";
-        this.todo.comentario=" ";
-        this.todo.edad=" ";
-
-      });
+    if (this.todo.nombre == " " || this.todo.edad == " " ||this.todo.comentario == " ") {
+      console.log("rellenar");
+      
     } else {
-      //se añade uno nuevo
-      this.todoService.addTodo(this.todo).then(() => {
-        //se ocualta el cargando
-        loading.dismiss();
-        //redireccionar a usuario
-        this.nav.navigateForward('/..');
-        this.todo.nombre=" ";
-        this.todo.comentario=" ";
-        this.todo.edad=" ";
-
+      const loading = await this.loadingController.create({
+        message: 'Guardando...'
       });
+      //nos muestra el cargando
+      await loading.present();
+  
+      if (this.todoId) {
+        //se actualiza
+        this.todoService.updateTodo(this.todo, this.todoId).then(() => {
+          //se ocualta el cargando
+          loading.dismiss();
+          //redireccionar a usuario
+          this.nav.navigateForward('/..');
+          this.todo.nombre=" ";
+          this.todo.comentario=" ";
+          this.todo.edad=" ";
+  
+        });
+      } else {
+        //se añade uno nuevo
+        this.todoService.addTodo(this.todo).then(() => {
+          //se ocualta el cargando
+          loading.dismiss();
+          //redireccionar a usuario
+          this.nav.navigateForward('/..');
+          this.todo.nombre=" ";
+          this.todo.comentario=" ";
+          this.todo.edad=" ";
+  
+        });
+      }
+      
     }
+
+    
   }
   onRemove(idTodo: string) {
     this.todoService.removeTodo(idTodo);;
