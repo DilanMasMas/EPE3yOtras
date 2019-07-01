@@ -8,3 +8,5 @@ Novosti del ruso "новости" (noticia)  es una aplicacion que como su mismo
 ![3](https://user-images.githubusercontent.com/26550175/60407139-8671b580-9b87-11e9-8632-2cab7e42258f.PNG)
 ![1](https://user-images.githubusercontent.com/26550175/60407140-8671b580-9b87-11e9-87d0-1eb542684877.PNG)
 
+
+:smiley: :smiley: :smiley:
